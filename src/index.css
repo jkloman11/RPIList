@@ -13,6 +13,11 @@
     float: left;
 }
 
+#header a{
+  text-decoration: none;
+  color:white;
+}
+
 .signIn{
   float: right;
 }
