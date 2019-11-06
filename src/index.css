@@ -1,0 +1,110 @@
+#header {
+  padding: 25px;
+  background: #fc4445;
+  color: white;
+  font-size: 20px;
+  font-family: 'Fugaz One', cursive;
+  display: block;
+  overflow: hidden;
+}
+
+#header h1{
+    text-align: left;
+    float: left;
+}
+
+.signIn{
+  float: right;
+}
+
+.signIn input{
+  width: 200px;
+  height: 20px;
+}
+
+#signInButton{
+  width: 100px;
+  height: 25px;
+}
+
+
+
+
+* {
+      margin: 0;
+      padding: 0;
+}
+
+
+.row {
+  display: flex;
+}
+
+.leftColumn {
+  flex: 50%;
+  border-right: 1px solid black;
+  font-family: 'Nunito', sans-serif;
+}
+
+.leftColumn p{
+  font-size: 45px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+}
+
+
+.leftColumn h2{
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.rightColumn{
+  flex: 50%;
+  font-family: 'Nunito', sans-serif;
+}
+
+.rightColumn h2{
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+
+#fName{
+  width: 220px;
+}
+
+#lName{
+  width: 220px;
+}
+
+#RIN{
+
+}
+
+#email{
+
+}
+
+#password{
+
+}
+
+#confirmPassword{
+
+}
+
+#submitButton{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.signUp input{
+  height: 30px;
+  margin-left: 150px;
+  margin-bottom: 30px;
+  width: 600px;
+
+}
