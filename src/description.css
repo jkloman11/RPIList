@@ -1,0 +1,112 @@
+#header {
+  padding: 25px;
+  background: #fc4445;
+  color: white;
+  font-size: 20px;
+  font-family: 'Fugaz One', cursive;
+  display: block;
+  overflow: hidden;
+}
+#header h1{
+    text-align: left;
+    float: left;
+}
+
+#header a{
+  text-decoration: none;
+  color:white;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+}
+
+.navBar{
+  list-style-type: none;
+  white-space: nowrap;
+  padding:0;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  float: right;
+  font-family: 'Nunito', sans-serif;
+}
+.navBar li{
+  display: inline;
+  margin-right: 40px;
+}
+.navBar a{
+  text-decoration: none;
+  color: #FAEBD7;
+}
+/*HEADER CSS ENDS HERE*/
+body{
+	background-color: gainsboro;
+}
+.top, .parinfo{
+	background-color: white;
+	margin-top: 10px;
+	border: 2px solid grey;
+	border-radius: 5px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.headinfo li{
+	 margin-top: 5px;
+   margin-right: 20px;
+	 font-size: 20px;
+   list-style: none;
+   display:inline;
+   margin-bottom: 5px;
+}
+#contact{
+	font-size: 20px;
+	font-style: 
+	margin-right: 300px;
+	background-color: floralwhite;
+	height: 60px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+.parinfo{
+	font-size: 20px;
+	height: 600px;
+}
+.screen {
+	width: 100%; /* Full width */
+  height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+.popup { 
+  margin: auto;
+  border: 1px solid #888;
+	background-color: white;
+  width: 500px;
+	height: 300px;
+	font-size: 20px;
+}
+.popup h1{
+	text-align: center;
+}
+.popup li, .popup p{
+	margin-left: 5px;
+	list-style: none;
+	margin-top: 5px;
+}
+.close{
+	position: absolute;
+	top: 350px;
+	right: 725px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
