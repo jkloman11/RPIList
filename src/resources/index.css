@@ -49,30 +49,43 @@
   flex: 50%;
   border-right: 1px solid black;
   font-family: 'Nunito', sans-serif;
+  padding-bottom: 400px;
+}
+
+
+.leftColumn h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.leftColumn h2{
+  margin-left: 30px;
+    /*margin: 0;*/
+  margin-bottom: 8px;
+  font-size: 30px;
 }
 
 .leftColumn p{
-  font-size: 45px;
-  margin-bottom: 100px;
-  margin-left: 20px;
+  width: 80%;
+  /*margin: auto;*/
+  margin-bottom: 50px;
+  margin-left: 30px;
 }
 
 
-.leftColumn h2{
-  text-align: center;
-  font-size: 60px;
-  margin-bottom: 40px;
-}
 
 .rightColumn{
   flex: 50%;
   font-family: 'Nunito', sans-serif;
 }
 
-.rightColumn h2{
+.rightColumn h1{
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 

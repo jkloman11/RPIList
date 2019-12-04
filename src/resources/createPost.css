@@ -34,12 +34,14 @@
   overflow: hidden;
   float: right;
   font-family: 'Nunito', sans-serif;
+  margin-top: 8px;
 
 
 }
 .navBar li{
   display: inline;
   margin-right: 40px;
+  font-size: 23px;
 }
 .navBar a{
   text-decoration: none;

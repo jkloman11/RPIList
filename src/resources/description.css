@@ -31,10 +31,12 @@
   overflow: hidden;
   float: right;
   font-family: 'Nunito', sans-serif;
+   margin-top: 8px;
 }
 .navBar li{
   display: inline;
   margin-right: 40px;
+  font-size: 23px;
 }
 .navBar a{
   text-decoration: none;
@@ -62,7 +64,7 @@ body{
 }
 #contact{
 	font-size: 20px;
-	font-style: 
+	font-style:
 	margin-right: 300px;
 	background-color: floralwhite;
 	height: 60px;
@@ -86,7 +88,7 @@ body{
 	display: none;
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
-.popup { 
+.popup {
   margin: auto;
   border: 1px solid #888;
 	background-color: white;
