@@ -34,3 +34,10 @@
   display: block;
   margin: 0 auto;
 }
+
+
+#drop-down{
+  width: 50%;
+  margin-bottom: 20px;
+  height: 30px;
+}
