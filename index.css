@@ -47,9 +47,9 @@
 
 .leftColumn {
   flex: 50%;
-  border-right: 1px solid black;
+  /*border-right: 1px solid black;*/
   font-family: 'Nunito', sans-serif;
-  padding-bottom: 400px;
+  /*padding-bottom: 400px;*/
 }
 
 
@@ -61,7 +61,7 @@
 }
 
 .leftColumn h2{
-  margin-left: 30px;
+  margin-left: 8%;
     /*margin: 0;*/
   margin-bottom: 8px;
   font-size: 30px;
@@ -71,10 +71,19 @@
   width: 80%;
   /*margin: auto;*/
   margin-bottom: 50px;
-  margin-left: 30px;
+  margin-left: 8%;
+}
+
+#mission{
+  margin-bottom: 0px;
 }
 
 
+img{
+  width: 75%;
+  height: 50%;
+  margin-left: 10%;
+}
 
 .rightColumn{
   flex: 50%;
