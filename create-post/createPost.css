@@ -1,0 +1,32 @@
+.createPost{
+  display: inline-block;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
+.form input{
+  margin-bottom: 20px;
+  width: 465px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.createPost h2{
+  text-align:center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  margin-top: 10px;
+  border-bottom: 2px solid black;
+}
+
+#description{
+  width: 465px;
+}
+
+#postButton{
+  width: 100px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+
+}

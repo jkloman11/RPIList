@@ -1,0 +1,66 @@
+body {
+   height: 100%;
+}
+#Search {
+   margin-left: 0px;
+   position: absolute;
+   top: 20px;
+   left: 100px;
+}
+#searchBttn {
+   background: url(search_icon.png);
+   background-repeat: no-repeat;
+   background-size: auto;
+   position: absolute;
+   top: 20px;
+   left: 270px;
+   cursor: pointer;
+}
+#list{
+   position: relative;
+   align-content: center;
+   padding-bottom: 5%;
+   padding-top: 5%;
+   background-color: lightgray;
+   height: 100%;
+   width: 70%;
+   padding-left: 15%;
+   padding-right: 15%;
+}
+.job h2{
+   margin-top: 5px;
+}
+.job{
+   padding-left: 10px;
+   margin-top: 5px;
+   padding-bottom: 5px;
+   border: 2px;
+   border-radius: 5px;
+   background-color: white;
+   margin-left: 5px;
+   margin-bottom: 0;
+   cursor: pointer;
+}
+.job h2{
+   margin-bottom: 5px;
+}
+.info{
+   padding-left: 0px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+.info li{
+   margin-right: 20px;
+   list-style: none;
+   display:inline;
+   margin-bottom: 5px;
+}
+#bottom{
+   align-content: center;
+   display: inline;
+   text-align: center;
+}
+#goBack{
+   margin-left: 48%;
+}
+

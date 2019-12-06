@@ -1,0 +1,36 @@
+#editProfile{
+  display: inline-block;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
+#editProfile h2{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  border-bottom: 2px solid black;
+}
+
+.form input{
+  margin-bottom: 30px;
+  width: 465px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+#fName{
+  margin-right: 15px;
+  width: 220px;
+}
+
+#lName{
+  width: 220px;
+}
+
+#submitButton{
+  width: 100px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+}
