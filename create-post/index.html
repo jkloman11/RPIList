@@ -4,26 +4,21 @@
     <title>Create Post</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="../resources/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="../resources/site.js"></script>
+    <script type="text/javascript" src="../resources/site.js"></script>
+    <script type="text/javascript" src="createPost.js"></script>
     <link rel="stylesheet" href="../resources/site.css" type="text/css">
     <link rel= "stylesheet" type="text/css" href = "createPost.css" />
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     
   </head>
-
-
-
   <body>
-
     <div id = "header"> </div>
 
     <div style = "text-align: center">
       <div class = "createPost">
         <h2>Create Post</h2>
-
-
-        <form class = "form">
+        <form id="create-post-form" class="form" method="post" onsubmit="return valdiatePost()" action="javascript:createPost()">
           <label>Title:  </label>
           <br>
           <input type = "text" name = "title" id = "title" placeholder="Post Title">
@@ -31,14 +26,13 @@
 
           <label>Date: </label>
           <br>
-          <input type = "date" name = "date" id = "date">
+          <input type="date" name = "date" id = "date">
           <br>
 
           <label>Time: </label>
           <br>
-          <input type = "time" name = "time" id = "time">
+          <input type = "text" name = "time" id = "time">
           <br>
-
 
           <label>Compensation: </label>
           <br>
@@ -47,36 +41,13 @@
 
           <label>Description: </label>
           <br>
-          <textarea rows="4" cols="50" id = "description">
-
-          </textarea>
-          <br>
-
-          <label>Phone Number:</label>
-          <br>
-          <input type = "tel" name = "phone" id = "phone" placeholder="Phone Number">
-          <br>
-
-          <label>Email: </label>
-          <br>
-          <input type = "email" name = "email" id = "email" placeholder="Contact Email">
+          <textarea rows="4" cols="50" name="description" id = "description"> </textarea>
           <br>
 
           <input type = "submit" name = "postButton" id = "postButton" value = "Post">
-
-
         </form>
-
-
-
-
       </div>
     </div>
-
-
-
-
-
   </body>
 
 </html>

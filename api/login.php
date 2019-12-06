@@ -21,6 +21,8 @@
         } else {
             $record = $result->fetch_assoc();
             if($record['password'] == $password) {
+				session_start();
+				$_SESSION['user_id'] = $record['id'];
                 echo "Success";
             } else {
                 echo "Invalid Username or Password.";
