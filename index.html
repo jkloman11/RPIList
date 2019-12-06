@@ -2,22 +2,23 @@
 <html>
   <head>
     <title>RPIList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="resources/site.css" type="text/css">
     <link rel= "stylesheet" type="text/css" href = "index.css" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   </head>
 
 
-
   <body>
     <div id = "header">
       <h1> RPI List </h1>
-      <div class = "signIn">
-        <form>
-          <input type = "text" name = "signInEmail" placeholder="RPI Email">
-          <input type = "text" name = "signInPassword" placeholder="Password">
+      <div class="signIn">
+        <form id=login-form method="post" action="javascript:login()">
+          <input type = "text" name = "email" placeholder="RPI Email">
+          <input type = "password" name = "password" placeholder="Password">
           <input type = "submit" name = "signInButton" id = "signInButton" value = "Sign In">
         </form>
       </div>
@@ -29,22 +30,22 @@
         <h1>Welcome</h1>
 
         <h2>About</h2>
-        <p>Do you have an itch to do some volunteer work? Do you want to get some hands on research expereince within your major? Or are you looking to get some extra credit for your General Psychology Exam? Look no further! RPIList is a transformative website that allows RPI students to view a wide selection of volunteer oppurtunties around campus! With RPIList students can both view and create new volunteer position openings to be filled with our simple to use interface. Try it out today!</p>
+        <p> Do you have an itch to do some volunteer work? Do you want to get some hands on research expereince within your major? Or are you looking to get
+           some extra credit for your General Psychology Exam? Look no further! RPIList is a transformative website that allows RPI students to view a wide 
+           selection of volunteer oppurtunties around campus! With RPIList students can both view and create new volunteer position openings to be filled 
+           with our simple to use interface. Try it out today!
+        </p>
 
         <h2>Our Mission</h2>
-        <p>Our mission is to provide an open forum so that students can easily find volunteer/research work around campus. We also want to provide a way for
-        professors, staff members, and other students to post openings for events that need extra help.</p>
-
+        <p> Our mission is to provide an open forum so that students can easily find volunteer/research work around campus. We also want to provide a way for
+            professors, staff members, and other students to post openings for events that need extra help.
+        </p>
       </div>
-
-
-
-
 
       <div class = "rightColumn">
         <h1>Sign up!</h1>
 
-        <form class = "signUp">
+        <form id="sign-up-form" class="signUp" form="sign-up" method="post" onsubmit="return signUpValidate()" action="javascript:createUser()">
           <input type = "text" name = "firstName" id = "fName"placeholder="First Name">
           <input type = "text" name = "lastName" id = "lName" placeholder="Last Name">
           <br>
@@ -54,14 +55,11 @@
           <br>
           <input type = "password" name = "confirmPassword" id = "confirmPassword" placeholder="Confirm Password">
           <br>
-
           <input type = "submit" name = "submitButton" id = "submitButton" value = "Sign Up">
         </form>
       </div>
 
     </div>
-
-
 
   </body>
 
