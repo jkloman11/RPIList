@@ -11,8 +11,12 @@ session_start();
     echo json_encode($connectErrors);
   } else {
     
-        
-    $select_query = "select * from users where id = " . $_SESSION["user_id"];
+    if(isset($_POST["user_id"])) {
+      $id = $_POST["user_id"];
+    } else {
+      $id = $_SESSION["user_id"];
+    }
+    $select_query = "select * from users where id = " . $id;
     $result = $db->query($select_query);
     $resultArray = $result->fetch_all(MYSQLI_ASSOC);
     
