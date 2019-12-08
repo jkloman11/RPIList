@@ -4,7 +4,9 @@ function getAllPosts() {
        url: "/RPIList/api/get-all-posts.php",
        success: function(responseData, status){
          htmlStr = ''
-         $.each(JSON.parse(responseData), function(i, post) {
+         jsonData = JSON.parse(responseData);
+         jsonData.sort((a, b) => a.date - b.date);
+         $.each(jsonData, function(i, post) {
             htmlStr += '<div class="job" onclick="window.location=\'/RPIList/post/?id=' + post['id'] + '&user-id=' + post['user_id']  + '\'">';
             htmlStr += '<h2>' + post["title"] + '</h2>';
             htmlStr += '<ul class="info">';
