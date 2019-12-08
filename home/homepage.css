@@ -1,46 +1,72 @@
 body {
    height: 100%;
 }
-#Search {
-   margin-left: 0px;
-   position: absolute;
-   top: 20px;
-   left: 100px;
+
+#content{
+   text-align: center;
 }
-#searchBttn {
-   background: url(/RPIList/resources/search_icon.png);
-   background-repeat: no-repeat;
-   background-size: auto;
-   position: absolute;
-   top: 20px;
-   left: 270px;
+
+#content h1{
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 40px;
+   margin-top: 10px;
+   border-bottom: 2px solid black;
+}
+
+#search-form {
+   text-align: left;
+}
+#search-form select {
+   padding: 12px 20px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+} 
+
+#search-form input {
+   width: 30em;
+   padding: 12px 20px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+
+ #search-form button {
+   background-color: red;
+   color: white;
+   padding: 14px 20px;
+   border: none;
+   border-radius: 5px;
    cursor: pointer;
-}
+ }
+
 #list{
+   display: inline-block;
    position: relative;
    align-content: center;
-   padding-bottom: 5%;
-   padding-top: 5%;
-   background-color: lightgray;
    height: 100%;
-   width: 70%;
-   padding-left: 15%;
-   padding-right: 15%;
+   width: 50em;
 }
 .job h2{
    margin-top: 5px;
 }
 .job{
-   padding-left: 10px;
-   margin-top: 5px;
-   padding-bottom: 5px;
-   border: 2px;
+   text-align: left;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
    border-radius: 5px;
+   border-style: solid;
+   border-color: white;
    background-color: white;
-   margin-left: 5px;
-   margin-bottom: 0;
+   margin-bottom: 1em;
    cursor: pointer;
 }
+.job:hover {
+   border-color: red;
+ }
+
 .job h2{
    margin-bottom: 5px;
 }

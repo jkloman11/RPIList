@@ -13,27 +13,32 @@
    </head>
    <body>
       <div id = "header"> </div>
+      <div id = "spacer"> </div>
 
-      <div id="list">
-         <form id="search-form" name="search-form" method="post" action="javascript:search()">
-            
-            <input type="text" name="query" placeholder="Search..">
-            <!-- <input type="text" name="query" id="Search" placeholder="Search.."> -->
-            
-            <label>Sort By:</label>
-            <select name="sort">
-               <option value="newest">Newest</option>
-               <option value="oldest">Oldest</option>
-               <option value="date">Date</option>
-            </select>
-            
-            <button type="submit"> GO </button>
-            <!-- <button type="submit" id="searchBttn"> <i class="fa fa-search"></i> </i></button> -->
+      <div id="content">
+         
+         <div id="list"> 
+            <h1>Listings</h1>
 
-         </form>
-         
-         <div id="postings"> </div>
-         
+            <form id="search-form" name="search-form" method="post" action="javascript:search()">
+               
+               <label>Search:</label> 
+               <input type="text" name="query" placeholder="Search..">
+               <label>Sort By:</label>
+               <select name="sort">
+                  <option value="newest">Newest</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="date">Date</option>
+               </select>
+               
+               <button type="submit"> GO </button>
+            </form>
+
+            <br>
+
+            <div id="postings"> </div>         
+         </div>
       </div>
+
    </body>
 </html>

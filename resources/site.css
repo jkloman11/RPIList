@@ -44,3 +44,19 @@
     color: #FAEBD7;
   }
   /* ---HEADER--- */
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+  }
+
+  #spacer {
+    margin-top: 120px;
+  }
