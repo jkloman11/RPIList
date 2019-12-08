@@ -16,12 +16,14 @@
     $lastName = trim($_POST["lastName"]);
     $phoneNum = trim($_POST["phone"]);
     $altEmail = trim($_POST["email2"]);
+    $major = $_POST["major"];
     
     $update_query = "update users set 
             first_name = '$firstName', 
             last_name = '$lastName', 
             phone_number = '$phoneNum',
-            alt_email = '$altEmail'
+            alt_email = '$altEmail',
+            major = '$major'
         where 
             id = $user_id;";
     

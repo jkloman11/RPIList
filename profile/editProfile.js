@@ -1,5 +1,31 @@
 $(document).ready(function() {
-    document.getElementById("fName").value = "jake";
+    //Create Drop Down
+    $.ajax({
+		type: "GET",
+		url: "/RPIList/resources/majors.json",
+		success: function(responseData, status){
+            var select = document.createElement("option");
+            select.value = "";
+            var text = document.createTextNode("No Major Chosen");
+            select.appendChild(text);
+    
+            var element = document.getElementById("drop-down");
+            element.appendChild(select);
+			$.each(responseData["majors"], function(i, major) {
+                var select = document.createElement("option");
+                select.value = major;
+                var text = document.createTextNode(major);
+                select.appendChild(text);
+        
+                var element = document.getElementById("drop-down");
+                element.appendChild(select);
+            });
+		}, error: function(msg) {
+		    alert("There was a problem: " + msg.status + " " + msg.statusText);
+		}
+    });
+
+    //Update form with current data
     $.ajax({
 		type: "GET",
 		url: "/RPIList/api/get-user-by-id.php",
@@ -14,10 +40,13 @@ $(document).ready(function() {
             if(user["alt_email"]){
                 document.getElementById("email2").value = user["alt_email"];
             }
+            if(user["major"]){
+                document.getElementById('drop-down').value = user["major"];
+            }
 		}, error: function(msg) {
 		    alert("There was a problem: " + msg.status + " " + msg.statusText);
 		}
-	});
+    });
 });
 
 function updateUser() {
