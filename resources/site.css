@@ -1,17 +1,27 @@
 /* ---HEADER--- */
 #header {
-    padding: 25px;
-    background: #fc4445;
-    color: white;
-    font-size: 20px;
-    font-family: 'Fugaz One', cursive;
-    display: block;
-    overflow: hidden;
-  }
-  #header h1{
-      text-align: left;
-      float: left;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+
+  background: #fc4445;
+  color: white;
+  font-size: 20px;
+  font-family: 'Fugaz One', cursive;
+  display: block;
+  overflow: hidden;
+}
+
+#header img {
+  text-align: left;
+  float: left;
+  margin-left: 0;
+  padding: 10px;
+  width: 10em;
+  height: 5em;
+}
   
   #header a{
     text-decoration: none;
@@ -32,8 +42,9 @@
     overflow: hidden;
     float: right;
     font-family: 'Nunito', sans-serif;
-     margin-top: 8px;
+     margin-top: 40px;
   }
+
   .navBar li{
     display: inline;
     margin-right: 40px;
@@ -47,14 +58,6 @@
 
   body {
     font-family: 'Nunito', sans-serif;
-  }
-
-  #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
   }
 
   #spacer {

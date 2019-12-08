@@ -1,13 +1,3 @@
-#header {
-  padding: 25px;
-  background: #fc4445;
-  color: white;
-  font-size: 20px;
-  font-family: 'Fugaz One', cursive;
-  display: block;
-  overflow: hidden;
-}
-
 #header h1{
     text-align: left;
     float: left;
@@ -23,23 +13,18 @@
 }
 
 .signIn input{
+  margin-top: 40px;
   width: 200px;
   height: 20px;
 }
 
 #signInButton{
+  margin-top: 40px;
   width: 100px;
   height: 25px;
+  padding-right: 10px;
+  margin-right: 50px;
 }
-
-
-
-
-* {
-      margin: 0;
-      padding: 0;
-}
-
 
 .row {
   display: flex;
@@ -80,9 +65,9 @@
 
 
 img{
-  width: 75%;
-  height: 50%;
-  margin-left: 10%;
+  width: 15em;
+  height: 17em;
+  margin-left: 35%;
 }
 
 .rightColumn{
@@ -104,22 +89,6 @@ img{
 
 #lName{
   width: 220px;
-}
-
-#RIN{
-
-}
-
-#email{
-
-}
-
-#password{
-
-}
-
-#confirmPassword{
-
 }
 
 #submitButton{

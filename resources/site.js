@@ -1,6 +1,6 @@
 $(document).ready(function() {
     htmlStr = `
-        <h1><a href = "/RPIList/home">RPI List</a></h1>
+        <a href = "/RPIList/home"><img src = "/RPIList/resources/hLogo.png" alt = "logo"></a>
         <ul class = "navBar">
             <li><a href = "/RPIList/create-post">Create a Post</a></li>
             <li><a href = "/RPIList/profile"> Profile</a></li>
