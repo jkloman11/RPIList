@@ -4,7 +4,8 @@
     <title>Edit Profile</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script type="text/javascript" src="../resources/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="../resources/site.js"></script>
+    <script type="text/javascript" src="../resources/site.js"></script>
+    <script type="text/javascript" src="editProfile.js"></script>
     <link rel="stylesheet" href="../resources/site.css" type="text/css">
     <link rel= "stylesheet" type="text/css" href = "editProfile.css" />
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
@@ -19,40 +20,36 @@
     <div style = "text-align: center">
       <div id = "editProfile">
         <h2>Edit Profile</h2>
-        <form class = "form">
+        <form id="edit-profile-form" class="form" onsubmit="return validateForm()" action="javascript:updateUser()">
           <label>Name: </label>
           <br>
-          <input type = "text" name = "firstName" id = "fName"placeholder="First Name">
-          <input type = "text" name = "lastName" id = "lName" placeholder="Last Name">
+          <input type="text" name="firstName" id="fName" placeholder="First Name">
+          <input type="text" name="lastName" id="lName" placeholder="Last Name">
 
           <br>
           <label>RPI Email: </label>
           <br>
-          <input type = "text" name = "email" id = "email" placeholder="RPI Email">
-
+          <input type="text" name="email" id="email" placeholder="RPI Email" readonly>
 
           <br>
           <label>Phone Number</label>
           <br>
-          <input type = "text" name = "phone" id = "phone" placeholder="Phone Number">
-
+          <input type="text" name="phone" id="phone" placeholder="Phone Number">
 
 
           <br>
           <label>Alternate Email: </label>
           <br>
-          <input type = "text" name = "email2" id = "email2" placeholder="Alternate Email">
+          <input type="text" name="email2" id="email2" placeholder="Alternate Email">
           <br>
 
           <label>Select a major: </label>
           <br>
-          <!-- <input list="hosting-plan" type="text"> -->
           <select id="drop-down">
               <option>Computer Science</option>
               <option>ITWS</option>
               <option>Physics</option>
           </select>
-
 
           <input type = "submit" name = "submitButton" id = "submitButton" value = "Save">
         </form>

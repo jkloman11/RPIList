@@ -25,13 +25,15 @@ $(document).ready(function() {
 		url: "/RPIList/api/get-user-by-id.php",
 		data: request,
 		success: function(responseData, status){
-			console.log(responseData);
 			var user = JSON.parse(responseData)[0];
 			document.getElementById('posted-by').innerHTML = "Posted by: " + user["first_name"] + " " + user["last_name"];
 			document.getElementById('poster-name').innerHTML = "Name: " + user["first_name"] + " " + user["last_name"];
 			document.getElementById('poster-email').innerHTML = "Email: " + user["email"];
 			if(user["phone_number"]) {
 				document.getElementById('poster-phone').innerHTML = "Phone: " + user["phone_number"];
+			}
+			if(user["alt_email"]) {
+				document.getElementById('poster-email2').innerHTML = "Alt. Email: " + user["alt_email"];
 			}
 		}, error: function(msg) {
 		  alert("There was a problem: " + msg.status + " " + msg.statusText);
