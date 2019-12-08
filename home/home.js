@@ -5,7 +5,7 @@ function getAllPosts() {
        success: function(responseData, status){
          htmlStr = ''
          $.each(JSON.parse(responseData), function(i, post) {
-            htmlStr += '<div class="job" onclick="window.location=\'/RPIList/post\'">';
+            htmlStr += '<div class="job" onclick="window.location=\'/RPIList/post/?id=' + post['id'] + '&user-id=' + post['user_id']  + '\'">';
             htmlStr += '<h2>' + post["title"] + '</h2>';
             htmlStr += '<ul class="info">';
             htmlStr += '<li> Date: ' + post["date"] + '</li>';

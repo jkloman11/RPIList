@@ -13,7 +13,7 @@
     
     if (isset($_POST["title"])) {
         
-        $user_id = $_SESSION['user_id'];
+        $user_id = (int)$_SESSION['user_id'];
         $title = trim($_POST["title"]);  
         $date = $_POST["date"];
         $time = trim($_POST["time"]);
@@ -22,7 +22,7 @@
 
         
         $sql = "INSERT INTO posts (`user_id`, `title`, `date`, `time`, `pay`, `description`)
-                VALUES ('$user_id', '$title', '$date', '$time', '$pay', '$description')";
+                VALUES ($user_id, '$title', '$date', '$time', '$pay', '$description')";
 
         if ($db->query($sql) === TRUE) {
             echo "Success";
