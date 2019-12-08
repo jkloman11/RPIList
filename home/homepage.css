@@ -8,7 +8,7 @@ body {
    left: 100px;
 }
 #searchBttn {
-   background: url(search_icon.png);
+   background: url(/RPIList/resources/search_icon.png);
    background-repeat: no-repeat;
    background-size: auto;
    position: absolute;
