@@ -15,16 +15,13 @@
       <div id = "header"> </div>
 
       <div id="list">
-         <input type="text" id="Search" placeholder="Search..">
-         <button type="submit" id="searchBttn"><i class="fa fa-search"></i></button>
+         <form id="search-form" name="search-form" method="post" action="javascript:search()">
+            <input type="text" id="Search" name="query" placeholder="Search..">
+            <button type="submit" id="searchBttn"><i class="fa fa-search"></i></button>
+         </form>
+         
          <div id="postings"> </div>
          
-         <div id="bottom">
-            <button id="goBack">&lt;&lt;</button>
-            <span>Page <var id="page">1</var></span>
-            <button id="goNext">>></button>
-         </div>
       </div>
    </body>
 </html>
-<!--Homepage and Job description page!-->
