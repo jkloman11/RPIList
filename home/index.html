@@ -16,8 +16,20 @@
 
       <div id="list">
          <form id="search-form" name="search-form" method="post" action="javascript:search()">
-            <input type="text" id="Search" name="query" placeholder="Search..">
-            <button type="submit" id="searchBttn"><i class="fa fa-search"></i></button>
+            
+            <input type="text" name="query" placeholder="Search..">
+            <!-- <input type="text" name="query" id="Search" placeholder="Search.."> -->
+            
+            <label>Sort By:</label>
+            <select name="sort">
+               <option value="newest">Newest</option>
+               <option value="oldest">Oldest</option>
+               <option value="date">Date</option>
+            </select>
+            
+            <button type="submit"> GO </button>
+            <!-- <button type="submit" id="searchBttn"> <i class="fa fa-search"></i> </i></button> -->
+
          </form>
          
          <div id="postings"> </div>

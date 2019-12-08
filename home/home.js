@@ -16,14 +16,15 @@ function buildPosts(jsonData) {
    document.getElementById("postings").innerHTML = htmlStr;
 }
 
-// Onload populate all post
+// Onload populate all post sorted by created timestamp
 $(document).ready(function() {
    $.ajax({
       type: "GET",
       url: "/RPIList/api/get-all-posts.php",
       success: function(responseData, status){
          jsonData = JSON.parse(responseData);
-         jsonData.sort((a, b) => a.created - b.created);
+
+         jsonData.sort(function (a, b) { return new Date(b.created) - new Date(a.created) });
          buildPosts(jsonData);
       }, error: function(msg) {
         alert("There was a problem: " + msg.status + " " + msg.statusText);
@@ -31,17 +32,27 @@ $(document).ready(function() {
   });                
 });
 
+// calls search and populates the homepage with posts 
 function search() {
-   var formData = $("#search-form").serialize();
-   
+   var formData = $("#search-form").serializeArray();
    $.ajax({
       type: "POST",
       url: "/RPIList/api/search-posts.php",
       data: formData,
       success: function(responseData, status){
-        jsonData = JSON.parse(responseData);
-        jsonData.sort((a, b) => a.created - b.created);
-        buildPosts(jsonData);
+         jsonData = JSON.parse(responseData);
+
+         if(formData[1].value == "newest"){
+            jsonData.sort(function (a, b) { return new Date(b.created) - new Date(a.created) });
+         }
+         if(formData[1].value == "oldest"){
+            jsonData.sort(function (a, b) { return new Date(a.created) - Date(b.created) });
+         }
+         if(formData[1].value == "date"){
+            jsonData.sort(function (a, b) { return new Date(b.date) - new Date(a.date) });
+         }
+
+         buildPosts(jsonData);
       }, error: function(msg) {
         alert("There was a problem: " + msg.status + " " + msg.statusText);
       }

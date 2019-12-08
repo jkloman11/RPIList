@@ -79,10 +79,11 @@ function validateForm(){
     }
     // regex from https://stackoverflow.com/questions/4338267/validate-phone-number-with-javascript/4338544
     if(!/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(formData[3].value) && formData[3].value != ""){
-        msg += "Phone Number: Must be a valid phone number."
+        msg += "Phone Number: Must be a valid phone number.\n"
     }
-    if(!/\S+@\S+\.\S+/.test(formData[4].value)){
-        msg += "Alternate Email: Must be a valid email."
+    console.log('|' + formData[4].value + '|')
+    if(!/\S+@\S+\.\S+/.test(formData[4].value) && formData[4].value != ""){
+        msg += "Alternate Email: Must be a valid email.\n"
     }
     if(msg != '') {
         alert(msg);

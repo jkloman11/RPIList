@@ -11,10 +11,10 @@ function signUpValidate() {
         msg += "A valid rpi email address is required.\n";
     }
     if(formData[3].value.length < 8){
-        msg += "Password must be at least 8 charecters."
+        msg += "Password must be at least 8 charecters.\n"
     }
     if(formData[3].value != formData[4].value) {
-        msg += "Passwords must match."
+        msg += "Passwords must match.\n"
     }
     if(msg != '') {
         alert(msg);
