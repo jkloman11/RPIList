@@ -5,11 +5,11 @@ function buildPosts(jsonData) {
       htmlStr += '<div class="job" onclick="window.location=\'/RPIList/post/?id=' + post['id'] + '&user-id=' + post['user_id']  + '\'">';
       htmlStr += '<h2>' + post["title"] + '</h2>';
       htmlStr += '<ul class="info">';
-      htmlStr += '<li> Date: ' + post["date"] + '</li>';
-      htmlStr += '<li> Compensation: ' + post["pay"] + '</li>';
-      htmlStr += '<li> Time: ' + post["time"] + '</li> <br>';
+      htmlStr += '<li> <strong>Date: </strong>' + post["date"] + '</li>';
+      htmlStr += '<li> <strong>Compensation: </strong>' + post["pay"] + '</li>';
+      htmlStr += '<li> <strong>Time: </strong>' + post["time"] + '</li> <br>';
       des = (post["description"].length > 75) ? post["description"].substring(0, 75)+'...' : post["description"]
-      htmlStr += '<li> Descritpion: ' + des + '</li>';
+      htmlStr += '<li> <strong>Descritpion: </strong>' + des + '</li>';
       htmlStr += '</ul>';
       htmlStr += '</div>';
    });
@@ -41,7 +41,6 @@ function search() {
       data: formData,
       success: function(responseData, status){
          jsonData = JSON.parse(responseData);
-
          if(formData[1].value == "newest"){
             jsonData.sort(function (a, b) { return new Date(b.created) - new Date(a.created) });
          }
@@ -51,6 +50,7 @@ function search() {
          if(formData[1].value == "date"){
             jsonData.sort(function (a, b) { return new Date(b.date) - new Date(a.date) });
          }
+         console.log(jsonData);
 
          buildPosts(jsonData);
       }, error: function(msg) {

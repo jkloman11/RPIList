@@ -11,10 +11,10 @@ $(document).ready(function() {
 		success: function(responseData, status){
 			var post = JSON.parse(responseData)[0];
 			document.getElementById("title").innerHTML = post["title"];
-			document.getElementById('description').innerHTML = post["description"];
-			document.getElementById("date").innerHTML = "Date: " + post["date"];
-			document.getElementById("pay").innerHTML = "Compensation: " + post["pay"];
-			document.getElementById("time").innerHTML = "Time: " + post["time"];
+			document.getElementById('description').innerHTML = "<strong>Description: </strong>" + post["description"];
+			document.getElementById("date").innerHTML = "<strong>Date: </strong>" + post["date"];
+			document.getElementById("pay").innerHTML = "<strong>Compensation: </strong>" + post["pay"];
+			document.getElementById("time").innerHTML = "<strong>Time: </strong>" + post["time"];
 		}, error: function(msg) {
 		  alert("There was a problem: " + msg.status + " " + msg.statusText);
 		}
@@ -26,14 +26,14 @@ $(document).ready(function() {
 		data: request,
 		success: function(responseData, status){
 			var user = JSON.parse(responseData)[0];
-			document.getElementById('posted-by').innerHTML = "Posted by: " + user["first_name"] + " " + user["last_name"];
-			document.getElementById('poster-name').innerHTML = "Name: " + user["first_name"] + " " + user["last_name"];
-			document.getElementById('poster-email').innerHTML = "Email: " + user["email"];
+			document.getElementById('posted-by').innerHTML = "<strong>Posted by: </strong>" + user["first_name"] + " " + user["last_name"];
+			document.getElementById('poster-name').innerHTML = "<strong>Name: </strong>" + user["first_name"] + " " + user["last_name"];
+			document.getElementById('poster-email').innerHTML = "<strong>Email: </strong>" + user["email"];
 			if(user["phone_number"]) {
-				document.getElementById('poster-phone').innerHTML = "Phone: " + user["phone_number"];
+				document.getElementById('poster-phone').innerHTML = "<strong>Phone: </strong>" + user["phone_number"];
 			}
 			if(user["alt_email"]) {
-				document.getElementById('poster-email2').innerHTML = "Alt. Email: " + user["alt_email"];
+				document.getElementById('poster-email2').innerHTML = "<strong>Alt. Email: </strong>" + user["alt_email"];
 			}
 		}, error: function(msg) {
 		  alert("There was a problem: " + msg.status + " " + msg.statusText);
@@ -41,12 +41,11 @@ $(document).ready(function() {
 	});
 
 	//Displays popup on click
-	$('#contact').click(function() {
-		console.log("here")
+	$('#contact').click(function(e) {
 		$('.screen').css('display','flex');
 	}); 
 	//Close popup when "X" is clicked
-	$('.close').click(function(){
+	$('.screen').click(function(){
 		$('.screen').css('display','none');
 	});
 
