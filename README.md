@@ -10,5 +10,5 @@ Our mission is to provide an open forum so that students can easily find volunte
 XAMPP must be install in order to use.
 1) Clone the RPIList repository to the htdocs folder of your XAMPP instalation.
 2) In PHPMyAdmin create a new database called RPIList.
-3) Run the setup-rpilist.sql PHPMyAdmin under the new RPIList database.
+3) Run the setup-rpilist.sql (located in the resources folder) in PHPMyAdmin under the new RPIList database.
 4) Now access the site at http://localhost/RPIList/
